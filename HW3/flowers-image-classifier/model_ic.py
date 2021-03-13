@@ -111,15 +111,12 @@ def make_NN(n_hidden, n_epoch, labelsdict, lr, device, model_name, trainloader, 
         model.train()
         for images, labels in trainloader:
             images, labels = images.to(device), labels.to(device)
-            print(images.shape)
 
             steps += 1
 
             optimizer.zero_grad()
             
-#             print(model)
             output = model.forward(images)
-#             print(output.shape)
             loss = criterion(output, labels)
             loss.backward()
             optimizer.step()
