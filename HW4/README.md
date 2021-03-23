@@ -71,5 +71,5 @@ Attack beta is better than attack alpha. For attack alpha, the lowest accuracy i
 
 ## D. Plausibility seems problematic, even with the iterated version of the gradient attack. Can you suggest two possible ways to improve our attack strategy on this dataset and model?
 
-1. Use the fast gradient sign method, which only uses the sign of the gradient to create an attack sample. This will help make plausible samples as there will be a plasubility constraint.
-2. Rather than targeting the least plausible class, we can target the next most probable class instead. This could allow the attack to fool the model with less change to the image.
+1. Use the fast gradient sign method, which only uses the sign of the gradient to create an attack sample. This will help make plausible samples as there will be a plausbility constraint.
+2. Limit the number of pixels changed to a small number.
